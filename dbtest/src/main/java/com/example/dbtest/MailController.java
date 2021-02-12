@@ -17,9 +17,9 @@ public class MailController {
     @RequestMapping(value = "/mail/send", method = {RequestMethod.POST} )
     public String send() {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo("送信先");
-        mailMessage.setReplyTo("返信先");
-        mailMessage.setFrom("送信元");
+        mailMessage.setTo("vivienne7070westwood@gmail.com");
+        mailMessage.setReplyTo("vivienne7070westwood@gmail.com");
+        mailMessage.setFrom("vivienne7070westwood@gmail.com");
         mailMessage.setSubject("テストメール");
         mailMessage.setText("テストメールです\nほげほげ");
         javaMailSender.send(mailMessage);
